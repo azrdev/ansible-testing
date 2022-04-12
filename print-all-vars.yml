@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: print all vars before fact gathering
+      debug:
+        var: vars
+
+    - name: Gather Facts
+      setup:
+
+    - name: print all vars after fact gathering
+      debug:
+        var: vars
